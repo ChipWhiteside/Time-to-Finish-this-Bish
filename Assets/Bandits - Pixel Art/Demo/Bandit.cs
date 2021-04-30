@@ -33,7 +33,7 @@ public class Bandit : MonoBehaviour {
             m_grounded = false;
             m_animator.SetBool("Grounded", m_grounded);
         }
-
+        /*
         // -- Handle input and movement --
         float inputX = Input.GetAxis("Horizontal");
 
@@ -81,7 +81,7 @@ public class Bandit : MonoBehaviour {
             m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
             m_groundSensor.Disable(0.2f);
         }
-
+        
         //Run
         else if (Mathf.Abs(inputX) > Mathf.Epsilon)
             m_animator.SetInteger("AnimState", 2);
@@ -93,5 +93,6 @@ public class Bandit : MonoBehaviour {
         //Idle
         else
             m_animator.SetInteger("AnimState", 0);
+        */
     }
 }

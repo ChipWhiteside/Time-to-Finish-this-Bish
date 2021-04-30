@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 50512961935941442}
   - component: {fileID: 61252362154681264}
   - component: {fileID: 3636980487698189141}
+  - component: {fileID: 7853121145071392333}
+  - component: {fileID: 8869894432872228210}
   m_Layer: 0
   m_Name: LightBandit
   m_TagString: Player
@@ -45,7 +47,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689866831511430}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b9a86f58301ee84aaa11c61c750305b, type: 3}
   m_Name: 
@@ -152,7 +154,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0.5
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -215,6 +217,35 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7853121145071392333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689866831511430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef1380e956a7514ab60deac172b0ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+--- !u!114 &8869894432872228210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689866831511430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b17aea43c9ace3458707dc6231809d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  jumpTime: 0.5
+  jumpForce: 8.5
+  gravityScale: 3
 --- !u!1 &1943394156383696
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +257,7 @@ GameObject:
   - component: {fileID: 4269114208525818}
   - component: {fileID: 114926350374723154}
   - component: {fileID: 61368513597639598}
+  - component: {fileID: 383728206609465530}
   m_Layer: 0
   m_Name: GroundSensor
   m_TagString: Player
@@ -241,7 +273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943394156383696}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: 0}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4805181885227780}
@@ -254,7 +286,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943394156383696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4beb47d3f52622a4db6bba0f8809ce39, type: 3}
   m_Name: 
@@ -285,3 +317,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.03}
   m_EdgeRadius: 0
+--- !u!114 &383728206609465530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943394156383696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0115598a690be144186b2f7d37273c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jm: {fileID: 8869894432872228210}
