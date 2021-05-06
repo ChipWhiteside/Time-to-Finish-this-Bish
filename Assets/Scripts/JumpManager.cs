@@ -9,7 +9,7 @@ public class JumpManager : MonoBehaviour
     private GroundCheck gc;
     private bool holdingJump;
     private float oldY;
-    private int verticleMovement;
+    //private int verticleMovement;
 
     public float timer = 0;
     public float jumpTime = .5f;
@@ -42,7 +42,7 @@ public class JumpManager : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-        if (rb.transform.position.y < oldY) // Falling
+        /*if (rb.transform.position.y < oldY) // Falling
         {
             oldY = rb.transform.position.y;
             verticleMovement = -1;
@@ -55,7 +55,7 @@ public class JumpManager : MonoBehaviour
         else // Staying
         {
             verticleMovement = 0;
-        }
+        }*/
     }
 
     void FixedUpdate()
@@ -66,13 +66,13 @@ public class JumpManager : MonoBehaviour
             Debug.Log("JumpForce: " + jf);
             rb.velocity = new Vector2(0, 1) * (jumpForce - ((jumpForce * .4f) * (timer / jumpTime)));
         }
-        if (verticleMovement != 0)
+        /*if (verticleMovement != 0)
         {
             if (rb.gravityScale < 5.5f)
             {
                 rb.gravityScale += (.25f);
             }
-        }
+        }*/
     }
 
     /*
@@ -90,7 +90,7 @@ public class JumpManager : MonoBehaviour
                 if (gc.State() > 0 /* || player has a double jump left*/)
                 {
                     timer = 0;
-                    rb.gravityScale = gravityScale;
+                    //rb.gravityScale = gravityScale;
                     holdingJump = true;
                 }
                 break;
@@ -120,6 +120,6 @@ public class JumpManager : MonoBehaviour
     {
         holdingJump = false;
         timer = 0;
-        rb.gravityScale = gravityScale;
+        //rb.gravityScale = gravityScale;
     }
 }
